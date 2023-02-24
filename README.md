@@ -5,6 +5,7 @@ The goal of our project is the development of an AI agent able to play an Aim Tr
 To collect the required data, we setup a Python script that, running in background during different play sessions, captured every 1/20th of a second an observation, made up of a screenshot taken at the beginning of the time interval together with the mouse movement on both the X and Y axes at the end of the interval. 
 
 The preprocessing was aimed at reducing the dimensionality of the input data and at removing unnecessary elements from the images, keeping only the crucial ones.
+
 In order to deal with the bi-dimensionality of the response vector, a multi-output strategy was followed, consisting in fitting one regressor per target (i.e. X and Y movements). The model was scored according to the arithmetic average of the individual regressor scores.
 
 A qualitative model assessment, via a live application, highlighted poor performance of the agent when facing particular game patterns. In addition, the LIME IML algorithm (by Marco Tulio Ribeiro et al., 2016), applied to a set of images selected by using the so called “Submodular Pick” method, seemed to suggest that the model struggled to discern target and corner pixels.
