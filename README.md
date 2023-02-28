@@ -1,5 +1,9 @@
 # Shoot for the Stats, AIm for the Moon: developing a pixel AImbot
 
+This repository contains the code for the project of the *Statistical Learning* course (1047208), Sapienza University. The group was composed by Francesco Redaelli and me.
+
+## Project Outline
+
 The goal of our project is the development of an AI agent able to play an Aim Trainer game. In order to chase a target on a wall, the agent exploits visual information to properly move the mouse pointer live, in a <ins>human-mimicking fashion</ins>. 
 
 To collect the required data, we setup a *Python* script that, running in background during different play sessions, captured every 1/20th of a second an observation, made up of a screenshot taken at the beginning of the time interval together with the mouse movement on both the *X* and *Y* axes at the end of the interval. 
@@ -15,9 +19,7 @@ In order to address the highlighted issues, we increased the input images resolu
 By applying domain specific knowledge to modify the data preprocessing pipeline, we obtained better quantitative and qualitative model performance, in terms of a lower *Random Forest RMSE* and a much smoother playstyle respectively. Also, the new *LIME* explanations seemed not to be affected by the
 aforementioned issues, suggesting an improvement in the model trustworthiness.
 
----
-
-Below is a brief demo of the final result:
+## Brief demo of the final result
 
 https://user-images.githubusercontent.com/47196616/221288757-a6a5c869-e0cf-4f2c-9cea-0996580578b9.mp4
 
